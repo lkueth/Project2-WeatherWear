@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WeatherWear_window</class>
+ <widget class="QMainWindow" name="WeatherWear_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1182</width>
+    <height>791</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="welcome_label">
+    <property name="geometry">
+     <rect>
+      <x>65</x>
+      <y>-50</y>
+      <width>501</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.SF Camera</family>
+      <pointsize>40</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Welcome to WeatherWear</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="enterstate_label">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>415</y>
+      <width>356</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.SF Camera</family>
+      <pointsize>30</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Enter a State/Region:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="entercity_label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>475</y>
+      <width>321</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.SF Camera</family>
+      <pointsize>30</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Enter a City:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="city_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>515</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.SF Camera</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>675</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.SF Camera</family>
+      <pointsize>24</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Submit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="errors">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>580</y>
+      <width>316</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="menu_weathericons">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>65</y>
+      <width>341</width>
+      <height>336</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>assets/menu_weathericons.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>405</y>
+      <width>541</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="homescreen">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>25</y>
+      <width>561</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="state">
+    <property name="geometry">
+     <rect>
+      <x>605</x>
+      <y>35</y>
+      <width>541</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>State/Region: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="city">
+    <property name="geometry">
+     <rect>
+      <x>605</x>
+      <y>65</y>
+      <width>251</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>City: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dateandtime">
+    <property name="geometry">
+     <rect>
+      <x>665</x>
+      <y>65</y>
+      <width>416</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Date + Time:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="temperature">
+    <property name="geometry">
+     <rect>
+      <x>755</x>
+      <y>130</y>
+      <width>236</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Temperature:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="condition">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>205</y>
+      <width>266</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Condition:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="conditionicon">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>235</y>
+      <width>136</width>
+      <height>116</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Condition Icon</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="windspeed">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>380</y>
+      <width>176</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Windspeed:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="chanceofrain">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>380</y>
+      <width>171</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Chance of Rain:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="whattowear">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>575</y>
+      <width>460</width>
+      <height>190</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>460</width>
+      <height>190</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>460</width>
+      <height>190</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="whattowhear_label">
+    <property name="geometry">
+     <rect>
+      <x>655</x>
+      <y>535</y>
+      <width>146</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>What Should You Wear?</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="winddirection">
+    <property name="geometry">
+     <rect>
+      <x>645</x>
+      <y>455</y>
+      <width>176</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Wind Direction:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="uv">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>455</y>
+      <width>171</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>UV Index:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxtemp">
+    <property name="geometry">
+     <rect>
+      <x>955</x>
+      <y>380</y>
+      <width>171</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Max Temp:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mintemp">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>460</y>
+      <width>171</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Max Temp:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="region_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>345</x>
+      <y>445</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.SF Camera</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+   </widget>
+   <zorder>menu</zorder>
+   <zorder>welcome_label</zorder>
+   <zorder>enterstate_label</zorder>
+   <zorder>entercity_label</zorder>
+   <zorder>city_lineEdit</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>errors</zorder>
+   <zorder>menu_weathericons</zorder>
+   <zorder>homescreen</zorder>
+   <zorder>state</zorder>
+   <zorder>city</zorder>
+   <zorder>dateandtime</zorder>
+   <zorder>temperature</zorder>
+   <zorder>condition</zorder>
+   <zorder>conditionicon</zorder>
+   <zorder>windspeed</zorder>
+   <zorder>chanceofrain</zorder>
+   <zorder>whattowear</zorder>
+   <zorder>whattowhear_label</zorder>
+   <zorder>winddirection</zorder>
+   <zorder>uv</zorder>
+   <zorder>maxtemp</zorder>
+   <zorder>mintemp</zorder>
+   <zorder>region_lineEdit</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets/assets.qrc"/>
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>5</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>5</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>
